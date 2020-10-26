@@ -1,5 +1,5 @@
 {
-  "name": "@geronimus/isNull",
+  "name": "@geronimus/isnull",
   "version": "0.1.0",
   "description": "Tests values for strict equality with null or undefined.",
   "main": "./src/isNull.js",
@@ -9,7 +9,7 @@
     "compile": "webpack",
     "lint": "eslint src",
     "lint:watch": "esw src --watch",
-    "publish-npm-artifacts": "node scripts/publish-npm-artifacts.js",
+    "publish-npm-artifacts": "node ../scripts/publish-npm-artifacts.js isNull",
     "test": "mocha",
     "test:lint": "npm-run-all --parallel test lint",
     "test:watch": "npm run test -- --watch",
