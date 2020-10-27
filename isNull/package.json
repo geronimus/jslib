@@ -1,6 +1,6 @@
 {
   "name": "@geronimus/isnull",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Tests values for strict equality with null or undefined.",
   "main": "./src/isNull.js",
   "scripts": {
