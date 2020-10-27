@@ -55,6 +55,7 @@ function publishPkgJson( sourcePkgJson, targetPkgJson ) {
     else {
       const pkgObj = JSON.parse( pkgString );
       const publishedPkgObj = filterObj( pkgObj, filterOut );
+      publishedPkgObj.main = `${ pkg }.js`;
 
       writeFile(
         targetPkgJson,
