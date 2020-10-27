@@ -19,15 +19,3 @@ isNull( false ) // => false
 
 The value to test for strict equality with `null` or `undefined`.
 
-## Usage Notes
-
-This function is part of a modular library. But the pieces are separated in order to be able to depend on only the components you need.
-
-For that reason, this function is exported as the only member of its object.
-
-You can import it like this:
-
-```javascript
-const { isNull } = require( "@geronimus/isNull"; )
-```
-
