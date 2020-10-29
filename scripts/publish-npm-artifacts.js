@@ -9,6 +9,7 @@ const pkgJson = "package.json"
 const projectRoot = resolve( __dirname, ".." );
 const sourceLicence = resolve( projectRoot, licence );
 const pkgs = [
+  "isEmpty",
   "isNull"
 ];
 const listSep = "\n  ";
