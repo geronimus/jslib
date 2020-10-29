@@ -8,7 +8,7 @@ module.exports = {
     path: path.resolve( __dirname, "dist" ),
     filename: "isNull.js",
     globalObject: "this",
-    library: "@geronimus/isNull",
+    library: "@geronimus/isnull",
     libraryTarget: "umd"
   },
   plugins: [

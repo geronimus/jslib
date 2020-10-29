@@ -2,26 +2,33 @@
 
 A modular set of utility functions for JavaScript.
 
-Because there are some interdependencies, we we will build each function, and published to a package-manager, independently.
+Each is intended to be published to the package manager independently, so that a user will only have to depend on the functions they use.
 
-Thereafter, users will be free to import only the functions they need, without worrying about transitive dependencies.
 
 
 ---
 
 # isEmpty( value : any ) : boolean
 
-Identifies whether or not the provided value represents an empty value, such as an empty string or array.
+Identifies whether the provided argument represents a value that does not hold any useful information. (eg, `null`, `undefined`, `NaN`, the empty string, or an empty Array, Map, Set or Object.)
 
-## Syntax
+## Examples
 
 ```javascript
-isEmpty( null ) // => true
-isEmpty( undefined ) // => true
-isEmpty( {} ) // => false
-isEmpty( [] ) // => false
-isEmpty( 0 ) // => false
-isEmpty( false ) // => false
+const { isEmpty } = require( "@geronimus/isempty" );
+
+isEmpty( null ); // => true
+isEmpty( undefined ); // => true
+isEmpty( false ); // => false
+isEmpty( NaN ); // => true
+isEmpty( 0 ); // => false
+isEmpty( "" ); // => true
+isEmpty( " " ); // => false
+isEmpty( {} ); // => true
+isEmpty( [] ); // => true
+isEmpty( [ {} ] ); // => false
+isEmpty( new Map() ); // => true
+isEmpty( new Set() ); // => true
 ```
 
 ## Parameters
@@ -38,9 +45,11 @@ The value to test for emptiness.
 
 Tests a value for strict equality with `null` and `undefined`, and returns `true` if the value is equal with either.
 
-## Syntax
+## Examples
 
 ```javascript
+const { isNull } = require( "@geronimus/isnull" );
+
 isNull( null ) // => true
 isNull( undefined ) // => true
 isNull( {} ) // => false

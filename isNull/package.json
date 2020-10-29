@@ -1,6 +1,6 @@
 {
   "name": "@geronimus/isnull",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Tests values for strict equality with null or undefined.",
   "main": "./src/isNull.js",
   "scripts": {
@@ -18,7 +18,7 @@
   "author": "Graham Brown (Geronimus)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/geronimus/jslib.git"
+    "url": "git+https://github.com/geronimus/jslib.git"
   },
   "license": "BSD-2-Clause",
   "devDependencies": {
@@ -31,5 +31,13 @@
     "rimraf": "^3.0.2",
     "webpack": "^5.2.0",
     "webpack-cli": "^4.1.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/geronimus/jslib/issues"
+  },
+  "homepage": "https://github.com/geronimus/jslib#readme",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {}
 }

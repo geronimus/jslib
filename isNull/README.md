@@ -2,9 +2,11 @@
 
 Tests a value for strict equality with `null` and `undefined`, and returns `true` if the value is equal with either.
 
-## Syntax
+## Examples
 
 ```javascript
+const { isNull } = require( "@geronimus/isnull" );
+
 isNull( null ) // => true
 isNull( undefined ) // => true
 isNull( {} ) // => false
