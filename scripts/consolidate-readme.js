@@ -64,12 +64,7 @@ function checkCompleted() {
     if ( timeoutId !== null )
       clearTimeout( timeoutId );
     
-    const megaReadme = readmes[ headingfile ] +
-      sectionBreak +
-      Object.keys( readmes )
-        .filter( key => key !== headingfile )
-        .map( key => readmes[ key ] )
-        .join( sectionBreak );
+    const megaReadme = buildMegaReadme( readmes );
 
     writeFile(
       resolve( root, filename ),
@@ -81,6 +76,26 @@ function checkCompleted() {
   }
   else
     return false;
+}
+
+function buildMegaReadme() {
+  const heading = readmes[ headingfile ];
+
+  const sections = Object.keys( readmes )
+    .filter( key => key !== headingfile )
+    .map( key => readmes[ key ] );
+  
+  const contentsLinks = sections
+    .map( text => text.slice( 2, text.indexOf( "\n" ) ) )
+    .map(
+      section => `- [${ section.slice( 0, section.indexOf( "(" ) ) }]` +
+        `(#${ section.replaceAll( /[^ 0-9A-Za-z]/g, "" ).replaceAll( " ", "-" ) })`
+    );
+
+    return [
+      [ heading, contentsLinks.join( "\n" ), "\n" ].join( "\n" ),
+      sections.join( sectionBreak ) 
+    ].join( sectionBreak );
 }
 
 function printResult( err ) {
