@@ -1,4 +1,4 @@
-# randomInt( lowerBound : number, upperBound : number ) : number
+# randomInt( lowerBound, upperBound )
 
 Generates a pseudo-random integer value between the bounds that you specify. (Both inclusive.)
 

@@ -6,16 +6,16 @@ Each is intended to be published to the package manager independently, so that a
 
 ## Contents
 
-- [coalesce](#coalesce--value1--any--value2--any--------any)
-- [isEmpty](#isEmpty-value--any---boolean)
-- [isNull](#isNull-value--any---boolean)
-- [randomInt](#randomInt-lowerBound--number-upperBound--number---number)
+- [coalesce](#coalesce--value1--value2------)
+- [isEmpty](#isEmpty-value-)
+- [isNull](#isNull-value-)
+- [randomInt](#randomInt-lowerBound-upperBound-)
 
 
 
 ---
 
-# coalesce( [ value1 : any, [ value2 : any, [ ... ] ] ] ) : any
+# coalesce( [ value1, [ value2, [ ... ] ] ] )
 
 As in SQL, `coalesce()` returns its first argument that is neither `null` nor `undefined`.
 
@@ -41,7 +41,7 @@ Any number of values or expressions. The first that does not evaluate to `null` 
 
 ---
 
-# isEmpty( value : any ) : boolean
+# isEmpty( value )
 
 Identifies whether the provided argument represents a value that does not hold any useful information. (eg, `null`, `undefined`, `NaN`, the empty string, or an empty Array, Map, Set or Object.)
 
@@ -74,7 +74,7 @@ The value to test for emptiness.
 
 ---
 
-# isNull( value : any ) : boolean
+# isNull( value )
 
 Tests a value for strict equality with `null` and `undefined`, and returns `true` if the value is equal with either.
 
@@ -101,7 +101,7 @@ The value to test for strict equality with `null` or `undefined`.
 
 ---
 
-# randomInt( lowerBound : number, upperBound : number ) : number
+# randomInt( lowerBound, upperBound )
 
 Generates a pseudo-random integer value between the bounds that you specify. (Both inclusive.)
 

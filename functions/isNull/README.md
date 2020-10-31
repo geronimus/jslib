@@ -1,4 +1,4 @@
-# isNull( value : any ) : boolean
+# isNull( value )
 
 Tests a value for strict equality with `null` and `undefined`, and returns `true` if the value is equal with either.
 

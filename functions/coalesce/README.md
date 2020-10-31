@@ -1,4 +1,4 @@
-# coalesce( [ value1 : any, [ value2 : any, [ ... ] ] ] ) : any
+# coalesce( [ value1, [ value2, [ ... ] ] ] )
 
 As in SQL, `coalesce()` returns its first argument that is neither `null` nor `undefined`.
 

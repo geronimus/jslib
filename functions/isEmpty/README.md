@@ -1,4 +1,4 @@
-# isEmpty( value : any ) : boolean
+# isEmpty( value )
 
 Identifies whether the provided argument represents a value that does not hold any useful information. (eg, `null`, `undefined`, `NaN`, the empty string, or an empty Array, Map, Set or Object.)
 
