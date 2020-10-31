@@ -8,6 +8,32 @@ Each is intended to be published to the package manager independently, so that a
 
 ---
 
+# coalesce( [ value1 : any, [ value2 : any, [ ... ] ] ] ) : any
+
+As in SQL, `coalesce()` returns its first argument that is neither `null` nor `undefined`.
+
+## Examples
+
+```javascript
+const { coalesce } = require( "@geronimus/coalesce" );
+
+const result = coalesce(
+  couldProduceNull( option1 ),
+  couldProduceNull( option2 ),
+  "default result"
+);
+```
+
+## Parameters
+
+`value1` *any*, `value2` *any*, ...
+
+Any number of values or expressions. The first that does not evaluate to `null` or `undefined` will be returned.
+
+
+
+---
+
 # isEmpty( value : any ) : boolean
 
 Identifies whether the provided argument represents a value that does not hold any useful information. (eg, `null`, `undefined`, `NaN`, the empty string, or an empty Array, Map, Set or Object.)
