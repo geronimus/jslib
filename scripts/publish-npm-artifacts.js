@@ -14,7 +14,8 @@ const pkgs = [
   "isEmpty",
   "isNull",
   "randomInt",
-  "range"
+  "range",
+  "uuid"
 ];
 const listSep = "\n  ";
 
