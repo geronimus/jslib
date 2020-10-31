@@ -2,11 +2,11 @@ const { readdir, readFile, writeFile } = require( "fs" );
 const { resolve } = require( "path" );
 
 const root = resolve( __dirname, ".." );
+const functions = resolve( root, "functions" );
 const encoding = "utf8";
 const sectionBreak = "\n\n---\n\n"
 
 const headingfile = resolve( root, "resources", "README-Heading.md" );
-const exclude = [ ".git", "resources", "scripts" ];
 const filename = "README.md"
 
 const readmes = {};
@@ -14,16 +14,14 @@ let completed = false;
 const timeout = 5000;
 let timeoutId = null;
 
-readdir( root, { withFileTypes: true }, processDir );
+readdir( functions, { withFileTypes: true }, processDir );
 
 function processDir( err, files ) {
   if ( err !== null )
     console.log( err );
   else {
-    const subReadmes = files.filter(
-      file => file.isDirectory() && !exclude.includes( file.name ) 
-    )
-      .map( sub => resolve( root, sub.name, filename ) )
+    const subReadmes = files.filter( file => file.isDirectory() )
+      .map( sub => resolve( functions, sub.name, filename ) )
       .sort();
 
     subReadmes.forEach( readme => {

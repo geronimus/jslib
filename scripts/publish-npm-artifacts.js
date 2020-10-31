@@ -7,6 +7,7 @@ const readme = "README.md";
 const pkgJson = "package.json"
 
 const projectRoot = resolve( __dirname, ".." );
+const functionsRoot = resolve( projectRoot, "functions" );
 const sourceLicence = resolve( projectRoot, licence );
 const pkgs = [
   "coalesce",
@@ -24,7 +25,7 @@ if (
     pkgs.join( listSep );
 
 const pkg = process.argv[ 2 ];
-const pkgRoot = resolve( projectRoot, pkg );
+const pkgRoot = resolve( functionsRoot, pkg );
 const sourceReadme = resolve( pkgRoot, readme );
 const sourcePkgJson = resolve( pkgRoot, pkgJson );
 
