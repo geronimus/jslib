@@ -12,7 +12,8 @@ const sourceLicence = resolve( projectRoot, licence );
 const pkgs = [
   "coalesce",
   "isEmpty",
-  "isNull"
+  "isNull",
+  "randomInt"
 ];
 const listSep = "\n  ";
 
