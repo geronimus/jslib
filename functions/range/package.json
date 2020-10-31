@@ -1,0 +1,43 @@
+{
+  "name": "@geronimus/range",
+  "version": "0.1.0",
+  "description": "Produces an array containing all of the integers between the bounds you specify.",
+  "main": "./src/range.js",
+  "scripts": {
+    "build": "npm-run-all --sequential clean compile publish-npm-artifacts",
+    "clean": "rimraf dist/*",
+    "compile": "webpack",
+    "lint": "eslint src",
+    "lint:watch": "esw src --watch",
+    "publish-npm-artifacts": "node ../../scripts/publish-npm-artifacts.js range",
+    "test": "mocha",
+    "test:lint": "npm-run-all --parallel test lint",
+    "test:watch": "npm run test -- --watch",
+    "test~": "npm-run-all --parallel test:watch lint:watch"
+  },
+  "author": "Graham Brown (Geronimus)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geronimus/jslib.git"
+  },
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^7.12.0",
+    "eslint-watch": "^7.0.0",
+    "eslint-webpack-plugin": "^2.1.0",
+    "mocha": "^8.2.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "webpack": "^5.2.0",
+    "webpack-cli": "^4.1.0"
+  },
+  "dependencies": {},
+  "bugs": {
+    "url": "https://github.com/geronimus/jslib/issues"
+  },
+  "homepage": "https://github.com/geronimus/jslib#readme",
+  "directories": {
+    "test": "test"
+  }
+}

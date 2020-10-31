@@ -13,7 +13,8 @@ const pkgs = [
   "coalesce",
   "isEmpty",
   "isNull",
-  "randomInt"
+  "randomInt",
+  "range"
 ];
 const listSep = "\n  ";
 

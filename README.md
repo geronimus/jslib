@@ -2,6 +2,8 @@
 
 A modular set of utility functions for JavaScript.
 
+Nothing here is rocket science. The intent is to provide some basic functionality that it would be handy not to have to re-implement in every project.
+
 Each is intended to be published to the package manager independently, so that a user will only have to depend on the functions they end up using.
 
 ## Contents
@@ -10,6 +12,7 @@ Each is intended to be published to the package manager independently, so that a
 - [isEmpty](#isEmpty-value-)
 - [isNull](#isNull-value-)
 - [randomInt](#randomInt-lowerBound-upperBound-)
+- [range](#range-lowerBound-upperBound-)
 
 
 
@@ -134,4 +137,42 @@ The largest possible random value that can be produced.
 This function uses `Math.random()` as a pseudo-random number generator.
 
 Therefore, ***DO NOT*** use it for any purpose that must be cryptographically secure.
+
+
+
+---
+
+# range( lowerBound, upperBound )
+
+Generates an array containing all of the integers between the two bounds that you specify. (Inclusive.)
+
+## Examples
+
+```javascript
+const { range } = require( "@geronimus/range" );
+
+console.log( range( 1, 5 ) );
+// Expected output:
+// => [ 1, 2, 3, 4, 5 ]
+```
+
+## Parameters
+
+`lowerBound` *number*
+
+The first number in the integer sequence that will be produced.
+
+`upperBound` *number*
+
+The last number in the integer sequence that will be produced.
+
+## Notes
+
+If either argument has a decimal part, it will be truncated.
+
+Both bounds must be between `Number.MIN_SAFE_INTEGER` and `Number.MAX_SAFE_INTEGER`.
+
+`upperBound` must be greater than or equal to `lowerBound`.
+
+The difference between the two bounds must be less than 4,294,967,296 (2<sup>32</sup>).
 
