@@ -20,11 +20,11 @@ const randomByteValue = randomInt( 0, 255 );
 
 `lowerBound` *number*
 
-The smallest of the values that you want to produce.
+The smallest possible random value that can be produced.
 
 `upperBound` *number*
 
-The largest of the values that you want to produce.
+The largest possible random value that can be produced.
 
 ## Notes
 
