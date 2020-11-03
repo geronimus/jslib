@@ -1,5 +1,5 @@
 const { resolve } = require( "path" );
-const { copyFile, readFile, writeFile } = require( "fs" );
+const { copyFile, readdirSync, readFile, writeFile } = require( "fs" );
 
 // References
 const licence = "LICENCE";
@@ -9,14 +9,13 @@ const pkgJson = "package.json"
 const projectRoot = resolve( __dirname, ".." );
 const functionsRoot = resolve( projectRoot, "functions" );
 const sourceLicence = resolve( projectRoot, licence );
-const pkgs = [
-  "coalesce",
-  "isEmpty",
-  "isNull",
-  "randomInt",
-  "range",
-  "uuid"
-];
+const pkgs = readdirSync(
+  functionsRoot,
+  { encoding: "utf8", withFileTypes: true }
+)
+  .filter( dirent => dirent.isDirectory() )
+  .map( dirent => dirent.name );
+
 const listSep = "\n  ";
 
 if (
