@@ -13,6 +13,7 @@ Each function is intended to be published to the package manager independently, 
 - [isNull](#isNull-value-)
 - [randomInt](#randomInt-lowerBound-upperBound-)
 - [range](#range-lowerBound-upperBound-)
+- [TypeErr](#TypeErr-param-expectedType-actualType-)
 - [uuid](#uuid)
 
 
@@ -176,6 +177,50 @@ Both bounds must be between `Number.MIN_SAFE_INTEGER` and `Number.MAX_SAFE_INTEG
 `upperBound` must be greater than or equal to `lowerBound`.
 
 The difference between the two bounds must be less than 4,294,967,296 (2<sup>32</sup>).
+
+
+
+---
+
+# TypeErr( param, expectedType, actualType )
+
+Returns a new instance of a `TypeError` with the error message:
+
+Parameter: _param_
+  Expected: _expectedType_
+  Actual: _actualType_
+
+## Examples
+
+```javascript
+const { TypeErr } = require( "@geronimus/type-err" );
+
+function hello( who ) {
+
+  if ( typeof who !== "string" )
+    throw TypeErr( "who", "string", typeof who );
+  else
+    console.log( `Hello, ${ who }!` );
+}
+```
+
+## Parameters
+
+`param` *string*
+
+The parameter, variable, or reference name where the invalid type was found.
+
+`expectedType` *string*
+
+The type that is expected or allowed.
+
+`actualType` *string*
+
+The type that was found.
+
+## Notes
+
+If you do not provide meaningful arguments, the generated message will be meaningless.
 
 
 
