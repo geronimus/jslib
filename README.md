@@ -53,7 +53,7 @@ Identifies whether the provided argument represents a value that does not hold a
 ## Examples
 
 ```javascript
-const { isEmpty } = require( "@geronimus/isempty" );
+const { isEmpty } = require( "@geronimus/is-empty" );
 
 isEmpty( null ); // => true
 isEmpty( undefined ); // => true
@@ -86,7 +86,7 @@ Tests a value for strict equality with `null` and `undefined`, and returns `true
 ## Examples
 
 ```javascript
-const { isNull } = require( "@geronimus/isnull" );
+const { isNull } = require( "@geronimus/is-null" );
 
 isNull( null ) // => true
 isNull( undefined ) // => true
@@ -119,7 +119,7 @@ Both bounds must be between `Number.MIN_SAFE_INTEGER` and `Number.MAX_SAFE_INTEG
 ## Examples
 
 ```javascript
-const { randomInt } = require( "@geronimus/randomint" );
+const { randomInt } = require( "@geronimus/random-int" );
 
 const randomByteValue = randomInt( 0, 255 );
 ```
@@ -186,9 +186,9 @@ The difference between the two bounds must be less than 4,294,967,296 (2<sup>32<
 
 Returns a new instance of a `TypeError` with the error message:
 
-Parameter: _param_
-  Expected: _expectedType_
-  Actual: _actualType_
+    Parameter: _param_
+      Expected: _expectedType_
+      Actual: _actualType_
 
 ## Examples
 

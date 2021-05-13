@@ -5,7 +5,7 @@ Tests a value for strict equality with `null` and `undefined`, and returns `true
 ## Examples
 
 ```javascript
-const { isNull } = require( "@geronimus/isnull" );
+const { isNull } = require( "@geronimus/is-null" );
 
 isNull( null ) // => true
 isNull( undefined ) // => true

@@ -2,9 +2,9 @@
 
 Returns a new instance of a `TypeError` with the error message:
 
-Parameter: _param_
-  Expected: _expectedType_
-  Actual: _actualType_
+    Parameter: _param_
+      Expected: _expectedType_
+      Actual: _actualType_
 
 ## Examples
 

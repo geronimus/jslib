@@ -5,7 +5,7 @@ Identifies whether the provided argument represents a value that does not hold a
 ## Examples
 
 ```javascript
-const { isEmpty } = require( "@geronimus/isempty" );
+const { isEmpty } = require( "@geronimus/is-empty" );
 
 isEmpty( null ); // => true
 isEmpty( undefined ); // => true

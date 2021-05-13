@@ -3,12 +3,12 @@ const ESLintPlugin = require( "eslint-webpack-plugin" );
 
 module.exports = {
   mode: "production",
-  entry: "./src/randomInt.js",
+  entry: "./src/is-empty.js",
   output: {
     path: path.resolve( __dirname, "dist" ),
-    filename: "randomInt.js",
+    filename: "is-empty.js",
     globalObject: "this",
-    library: "@geronimus/randomint",
+    library: "@geronimus/is-empty",
     libraryTarget: "umd"
   },
   plugins: [
