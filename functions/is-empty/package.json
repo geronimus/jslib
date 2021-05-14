@@ -1,6 +1,6 @@
 {
   "name": "@geronimus/is-empty",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Identifies whether or not the provided value represents an empty value, such as an empty string or array.",
   "main": "./src/is-empty.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "compile": "webpack",
     "lint": "eslint src",
     "lint:watch": "esw src --watch",
-    "publish-npm-artifacts": "node ../../scripts/publish-npm-artifacts.js isEmpty",
+    "publish-npm-artifacts": "node ../../scripts/publish-npm-artifacts.js is-empty",
     "test": "mocha",
     "test:lint": "npm-run-all --parallel test lint",
     "test:watch": "npm run test -- --watch",
@@ -33,7 +33,7 @@
     "webpack-cli": "^4.7.0"
   },
   "dependencies": {
-    "@geronimus/isnull": ">=0.1.0"
+    "@geronimus/is-null": "^0.1.4"
   },
   "bugs": {
     "url": "https://github.com/geronimus/jslib/issues"

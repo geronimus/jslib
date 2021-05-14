@@ -9,7 +9,7 @@
     "compile": "webpack",
     "lint": "eslint src",
     "lint:watch": "esw src --watch",
-    "publish-npm-artifacts": "node ../../scripts/publish-npm-artifacts.js isNull",
+    "publish-npm-artifacts": "node ../../scripts/publish-npm-artifacts.js is-null",
     "test": "mocha",
     "test:lint": "npm-run-all --parallel test lint",
     "test:watch": "npm run test -- --watch",

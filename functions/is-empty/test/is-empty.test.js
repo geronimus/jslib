@@ -1,5 +1,5 @@
 const { assert } = require( "chai" );
-const { isEmpty } = require( "../src/isEmpty" );
+const { isEmpty } = require( "../src/is-empty" );
 
 describe( "isEmpty", () => {
   it( "Identifies empty expressions.", () => {

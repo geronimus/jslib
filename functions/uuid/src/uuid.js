@@ -1,4 +1,4 @@
-const { randomInt } = require( "@geronimus/randomint" );
+const { randomInt } = require( "@geronimus/random-int" );
 const { range } = require( "@geronimus/range" );
 
 function uuid() {

@@ -1,4 +1,4 @@
-const { isNull } = require( "@geronimus/isnull" );
+const { isNull } = require( "@geronimus/is-null" );
 
 function coalesce( ...args ) {
   
