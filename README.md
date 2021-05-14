@@ -8,17 +8,17 @@ Each function is intended to be published to the package manager independently, 
 
 ## Contents
 
-- [coalesce](coalesce--value1--value2------)
-- [deepFreeze](deepFreeze-obj-)
-- [defineReadOnly](defineReadOnly-obj-propertyMap-)
-- [isEmpty](isEmpty-value-)
-- [isNull](isNull-value-)
-- [isObject](isObject-value-)
-- [randomInt](randomInt-lowerBound-upperBound-)
-- [range](range-lowerBound-upperBound-)
-- [Try](Try)
-- [TypeErr](TypeErr-param-expectedType-actualType-)
-- [uuid](uuid)
+- [coalesce](#coalesce--value1--value2------)
+- [deepFreeze](#deepFreeze-obj-)
+- [defineReadOnly](#defineReadOnly-obj-propertyMap-)
+- [isEmpty](#isEmpty-value-)
+- [isNull](#isNull-value-)
+- [isObject](#isObject-value-)
+- [randomInt](#randomInt-lowerBound-upperBound-)
+- [range](#range-lowerBound-upperBound-)
+- [Try](#Try)
+- [TypeErr](#TypeErr-param-expectedType-actualType-)
+- [uuid](#uuid)
 
 
 

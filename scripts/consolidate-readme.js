@@ -102,7 +102,7 @@ function buildMegaReadme() {
       .replaceAll( /[^ 0-9A-Za-z]/g, "" )
       .replaceAll( " ", "-" );
 
-    return `- [${ headline }](${ linkText })`;
+    return `- [${ headline }](#${ linkText })`;
   }
 }
 
