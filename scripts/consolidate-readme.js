@@ -85,17 +85,25 @@ function buildMegaReadme() {
     .filter( key => key !== headingfile )
     .map( key => readmes[ key ] );
   
-  const contentsLinks = sections
-    .map( text => text.slice( 2, text.indexOf( "\n" ) ) )
-    .map(
-      section => `- [${ section.slice( 0, section.indexOf( "(" ) ) }]` +
-        `(#${ section.replaceAll( /[^ 0-9A-Za-z]/g, "" ).replaceAll( " ", "-" ) })`
-    );
+  const contentsLinks = sections.map( text => getContentsLink( text ) );
 
-    return [
-      [ heading, contentsLinks.join( "\n" ), "\n" ].join( "\n" ),
-      sections.join( sectionBreak ) 
-    ].join( sectionBreak );
+  return [
+    [ heading, contentsLinks.join( "\n" ), "\n" ].join( "\n" ),
+    sections.join( sectionBreak ) 
+  ].join( sectionBreak );
+
+  function getContentsLink( sectionText ) {
+
+    const topLine = sectionText.slice( 2, sectionText.indexOf( "\n" ) );
+    const headline = topLine.indexOf( "(" ) > -1
+      ? topLine.slice( 0, topLine.indexOf( "(" ) )
+      : topLine;
+    const linkText = topLine
+      .replaceAll( /[^ 0-9A-Za-z]/g, "" )
+      .replaceAll( " ", "-" );
+
+    return `- [${ headline }](${ linkText })`;
+  }
 }
 
 function printResult( err ) {
