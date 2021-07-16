@@ -17,7 +17,7 @@ Each function is intended to be published to the package manager independently, 
 - [Option](#Option)
 - [randomInt](#randomInt-lowerBound-upperBound-)
 - [range](#range-lowerBound-upperBound-)
-- [Try](#Try)
+- [try](#try)
 - [TypeErr](#TypeErr-param-expectedType-actualType-)
 - [uuid](#uuid)
 
@@ -404,7 +404,7 @@ The difference between the two bounds must be less than 4,294,967,296 (2<sup>32<
 
 ---
 
-# Try
+# try
 
 Contains functions to create `Success` and `Failure` objects, which you can return from function calls that may result in failure.
 
@@ -464,6 +464,18 @@ function defineReadOnly( obj, propertyName, propertyValue ) {
 
 - The value returned by `Success` will be an instance of `Success`. (`successValue instanceof Success; // => true`)
 - The value returned by `Failure` will be an instance of `Failure`. (`failureValue instanceof Failure; // => true`)
+
+## Try
+
+This is a constructor for either a Success or Failure object.
+
+You provide an operation (a function) and `Try` will execute that function.
+
+If your operation successfully completes, `Try` will return a `Success`.
+
+If it returns a value, then the `Success` object will contain that value as its `result`.
+
+If your operation produces an error, then `Try` will return a `Failure` that wraps that error.
 
 
 

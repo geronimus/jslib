@@ -1,65 +1,58 @@
 const { assert } = require( "chai" );
-const { Failure, Success } = require( "../src/try" );
+const { Failure, Success, Try } = require( "../src/try" );
 
-describe( "Failure", () => {
+describe( "Try( operation )", () => {
 
-  it( "Identifies itself as a Failure.", () => {
-    
-    assert.isTrue( Failure().isFailure );
-  });
+  it(
+    "If you don't pass it an operation, it actually throws a TypeError.",
+    () => {
+      [ null, undefined, true, 1, "function", {} ].forEach( badInit => {
+        assert.throws( () => { return Try( badInit ); }, TypeError );
+      });
+    }
+  );
 
-  it( "Identifies itself as not a Success.", () => {
-    
-    assert.isFalse( Failure().isSuccess );
-  });
+  it(
+    "If your operation throws, it returns a failure containing the exception.",
+    () => {
+      const typeErr = Try( () => { throw new TypeError( "TypeError" ); } );
+      const refErr = Try(
+        () => { throw new ReferenceError( "ReferenceError" ); }
+      );
 
-  it( "Is an instance of a Failure.", () => {
-    
-    assert.instanceOf( Failure(), Failure );
-  });
+      assert.instanceOf( typeErr, Failure );
+      assert.instanceOf( typeErr.error, TypeError );
+      assert.strictEqual( typeErr.error.message, "TypeError" );
 
-  it( "No two Failures are the same.", () => {
+      assert.instanceOf( refErr, Failure );
+      assert.instanceOf( refErr.error, ReferenceError );
+      assert.strictEqual( refErr.error.message, "ReferenceError" );
+    }
+  );
 
-    assert.notStrictEqual( Failure(), Failure() );
-  });
+  it(
+    "If your operation returns nothing, you get a success wrapping " +
+      "`undefined`.",
+    () => {
+      const emptyFunc = Try( () => {} );
 
-  it( "Exposes the object you pass to it as `error`.", () => {
+      assert.instanceOf( emptyFunc, Success );
+      assert.strictEqual( emptyFunc.result, undefined );
+    }
+  );
 
-    const typeError = new TypeError( "The argument was the wrong type." );
-    const failure = Failure( typeError );
-    
-    assert.strictEqual( failure.error, typeError );
-  });
-});
+  it(
+    "If your function returns something, then you get a Success wrapping the " +
+      "return value.",
+    () => {
+      const thing = { "thing": true };
+      function returnThatThing() { return thing; }
 
-describe( "Success", () => {
+      const returned = Try( returnThatThing );
 
-  it( "Identifies itself as a Success.", () => {
-    
-    assert.isTrue( Success().isSuccess );
-  });
-
-  it( "Identifies itself as not a Failiure.", () => {
-    
-    assert.isFalse( Success().isFailure );
-  });
-
-  it( "Is an instance of a Success.", () => {
-    
-    assert.instanceOf( Success(), Success );
-  });
-
-  it( "No two Successes are the same.", () => {
-
-    assert.notStrictEqual( Success(), Success() );
-  });
-
-  it( "Exposes the object you pass to it as `result`.", () => {
-
-    const returnValue = 0;
-    const success = Success( returnValue );
-
-    assert.strictEqual( success.result, returnValue );
-  });
+      assert.instanceOf( returned, Success );
+      assert.strictEqual( returned.result, thing );
+    }
+  );
 });
 

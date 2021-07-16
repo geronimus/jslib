@@ -1,6 +1,6 @@
 {
   "name": "@geronimus/try",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Creates objects to use in the Try (request/response) pattern of control flow.",
   "main": "./src/try.js",
   "scripts": {
@@ -40,6 +40,7 @@
     "webpack-cli": "^4.7.0"
   },
   "dependencies": {
-    "@geronimus/define-read-only": "^0.1.0"
+    "@geronimus/define-read-only": "^0.1.0",
+    "@geronimus/type-err": "^0.1.0"
   }
 }

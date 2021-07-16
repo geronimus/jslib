@@ -1,4 +1,5 @@
 const { defineReadOnly } = require( "@geronimus/define-read-only" );
+const { TypeErr } = require( "@geronimus/type-err" );
 
 function Failure( error ) {
 
@@ -30,5 +31,14 @@ function Success( result ) {
   );
 }
 
-module.exports = { Failure, Success };
+function Try( operation ) {
+
+  if ( typeof operation !== "function" )
+    throw TypeErr( "operation", "function", typeof operation );
+  else
+    try { return Success( operation() ); }
+    catch ( error ) { return Failure( error ); }
+}
+
+module.exports = { Failure, Success, Try };
 
