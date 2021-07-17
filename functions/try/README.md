@@ -36,7 +36,7 @@ It contains the `Try` interface described above, and an optional additional prop
 
 You can use the keyword `new` to create a new `Success` instance, but you do not have to.
 
-#### Examples
+#### Example
 
 ```javascript
 const { Failure, Success } = require( "@geronimus/try" );
@@ -98,7 +98,9 @@ If all operations complete successfully, then `TryAll` will return a `Success` w
 
 If any intermediary operations return a result, then `TryAll` will pass each result as the first argument to the next function in the chain.
 
-#### Example
+#### Examples
+
+##### Success
 
 ```javascript
 const { TryAll } = require( "@geronimus/try" );
@@ -111,6 +113,8 @@ function four( prev ) { return prev + "four!"; }
 TryAll( [ one, two, three, four ] );
 // => Success( "One potato, two potato, three potato, four!" )
 ```
+
+##### Failure
 
 ```javascript
 const { TryAll } = require( "@geronimus/try" );
