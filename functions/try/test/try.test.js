@@ -54,5 +54,30 @@ describe( "Try( operation )", () => {
       assert.strictEqual( returned.result, thing );
     }
   );
+
+  it(
+    "If your function returns a Failure, Try returns that Failure - not a " +
+      "Success wrapping the Failure.",
+    () => {
+      function returnFailure() { return Failure( new Error( "Wrong!" ) ); }
+      const res = Try( returnFailure );
+
+      assert.isFalse( res.isSuccess );
+      assert.isTrue( res.isFailure );
+    }
+  );
+
+  it(
+    "If your function returns a Success, Try \"flat-maps\" the result, so " +
+      "that it contains the result of the original function, rather than a " +
+      "Success wrapping another Success.",
+    () => {
+      function luckySeven() { return Success( 7 ); }
+      const res = Try( luckySeven );
+
+      assert.isTrue( res.isSuccess );
+      assert.strictEqual( res.result, 7 );
+    }
+  );
 });
 
