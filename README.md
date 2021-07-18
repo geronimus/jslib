@@ -427,7 +427,7 @@ const { resolveTypeName } = require( "@geronimus/resolve-type-name" );
 function resolveTypeName( undefined ); \\ => "undefined"
 function resolveTypeName( true ); \\ => "boolean"
 function resolveTypeName( 1 ); \\ => "number"
-function resolveTypeName( "" ); \\ => "string"
+function resolveTypeName( "text" ); \\ => "string"
 function resolveTypeName( null ); \\ => "null"
 function resolveTypeName( () => {} ); \\ => "function"
 function resolveTypeName( {} ); \\ => "object"
