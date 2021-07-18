@@ -1,0 +1,44 @@
+{
+  "name": "@geronimus/resolve-type-name",
+  "version": "0.1.0",
+  "description": "Resolves the type name of a value using both ECMAScript's primitive and extended type systems.",
+  "main": "./src/resolve-type-name.js",
+  "scripts": {
+    "build": "npm-run-all --sequential clean compile publish-npm-artifacts",
+    "clean": "rimraf dist/*",
+    "compile": "webpack",
+    "lint": "eslint src",
+    "lint:watch": "esw src --watch",
+    "publish-npm-artifacts": "node ../../scripts/publish-npm-artifacts.js resolve-type-name",
+    "test": "mocha",
+    "test:lint": "npm-run-all --parallel test lint",
+    "test:watch": "npm run test -- --watch",
+    "test~": "npm-run-all --parallel test:watch lint:watch"
+  },
+  "author": "Graham Brown (Geronimus)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geronimus/jslib.git"
+  },
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/geronimus/jslib/issues"
+  },
+  "homepage": "https://github.com/geronimus/jslib#readme",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "eslint": "^7.30.0",
+    "eslint-watch": "^7.0.0",
+    "eslint-webpack-plugin": "^2.5.4",
+    "mocha": "^9.0.2",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "webpack": "^5.45.1",
+    "webpack-cli": "^4.7.2"
+  },
+  "dependencies": {
+  }
+}
