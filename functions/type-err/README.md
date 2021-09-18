@@ -9,7 +9,7 @@ Returns a new instance of a `TypeError` with the error message:
 ## Examples
 
 ```javascript
-const { TypeErr } = require( "@geronimus/type-err" );
+const TypeErr = require( "@geronimus/type-err" );
 
 function hello( who ) {
 

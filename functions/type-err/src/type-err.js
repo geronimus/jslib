@@ -6,7 +6,5 @@ function TypeErr( param, expectedType, foundType ) {
   );
 }
 
-module.exports = {
-  TypeErr
-};
+module.exports = TypeErr;
 

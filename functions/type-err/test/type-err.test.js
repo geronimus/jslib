@@ -1,5 +1,5 @@
 const { assert } = require( "chai" );
-const { TypeErr } = require( "../src/type-err" );
+const TypeErr = require( "../src/type-err" );
 
 describe( "TypeErr( param, expectedType, actualType )", () => {
 

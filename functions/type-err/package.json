@@ -1,6 +1,6 @@
 {
   "name": "@geronimus/type-err",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simplifies generating an instance of TypeError with a predictable message.",
   "main": "./src/type-err.js",
   "scripts": {
