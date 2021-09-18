@@ -1,5 +1,5 @@
 const { assert } = require( "chai" );
-const { coalesce } = require( "../src/coalesce" );
+const coalesce = require( "../src/coalesce" );
 
 describe( "coalesce", () => {
 

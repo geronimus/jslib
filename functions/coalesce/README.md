@@ -5,7 +5,7 @@ As in SQL, `coalesce()` returns its first argument that is neither `null` nor `u
 ## Examples
 
 ```javascript
-const { coalesce } = require( "@geronimus/coalesce" );
+const coalesce = require( "@geronimus/coalesce" );
 
 const result = coalesce(
   couldProduceNull( option1 ),

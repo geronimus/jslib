@@ -1,6 +1,6 @@
 {
   "name": "@geronimus/coalesce",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "As in SQL, returns its first argument that is neither null nor undefined.",
   "main": "./src/coalesce.js",
   "scripts": {

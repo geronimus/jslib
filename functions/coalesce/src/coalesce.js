@@ -20,5 +20,5 @@ function coalesce( ...args ) {
     return result;
 }
 
-exports.coalesce = coalesce;
+module.exports = coalesce;
 
