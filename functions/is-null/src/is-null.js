@@ -3,5 +3,5 @@ function isNull( value ) {
     value === null;
 }
 
-exports.isNull = isNull;
+module.exports = isNull;
 

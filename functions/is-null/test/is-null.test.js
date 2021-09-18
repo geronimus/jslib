@@ -1,5 +1,5 @@
 const { assert } = require( "chai" );
-const { isNull } = require( "../src/is-null" );
+const isNull = require( "../src/is-null" );
 
 describe( "isNull( value )", () => {
 
