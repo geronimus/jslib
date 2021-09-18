@@ -1,6 +1,6 @@
 {
   "name": "@geronimus/resolve-type-name",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Resolves the type name of a value using both ECMAScript's primitive and extended type systems.",
   "main": "./src/resolve-type-name.js",
   "scripts": {
@@ -30,15 +30,13 @@
   },
   "devDependencies": {
     "chai": "^4.3.4",
-    "eslint": "^7.30.0",
+    "eslint": "^7.32.0",
     "eslint-watch": "^7.0.0",
     "eslint-webpack-plugin": "^2.5.4",
-    "mocha": "^9.0.2",
+    "mocha": "^9.1.1",
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",
-    "webpack": "^5.45.1",
-    "webpack-cli": "^4.7.2"
-  },
-  "dependencies": {
+    "webpack": "^5.53.0",
+    "webpack-cli": "^4.8.0"
   }
 }

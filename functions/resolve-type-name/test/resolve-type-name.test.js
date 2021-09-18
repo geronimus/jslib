@@ -1,5 +1,5 @@
 const { assert } = require( "chai" );
-const { resolveTypeName } = require( "../src/resolve-type-name" );
+const resolveTypeName = require( "../src/resolve-type-name" );
 
 describe( "resolveTypeName( value )", () => {
 

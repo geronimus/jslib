@@ -14,5 +14,5 @@ function resolveTypeName( value ) {
     return typeof value; 
 }
 
-module.exports = { resolveTypeName };
+module.exports = resolveTypeName;
 

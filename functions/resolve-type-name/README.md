@@ -15,7 +15,7 @@ Identifies the type of a value, whether the type is primitive, complex, or exten
 #### Example
 
 ```javascript
-const { resolveTypeName } = require( "@geronimus/resolve-type-name" );
+const resolveTypeName = require( "@geronimus/resolve-type-name" );
 
 function resolveTypeName( undefined ); \\ => "undefined"
 function resolveTypeName( true ); \\ => "boolean"
