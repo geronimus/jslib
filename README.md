@@ -33,7 +33,7 @@ As in SQL, `coalesce()` returns its first argument that is neither `null` nor `u
 ## Examples
 
 ```javascript
-const { coalesce } = require( "@geronimus/coalesce" );
+const coalesce = require( "@geronimus/coalesce" );
 
 const result = coalesce(
   couldProduceNull( option1 ),
@@ -59,7 +59,7 @@ Recursively freezes an object, and all objects referenced in that object's prope
 ## Examples
 
 ```javascript
-const { deepFreeze } = require( "@geronimus/deep-freeze" );
+const deepFreeze = require( "@geronimus/deep-freeze" );
 
 const box = {
   height: 20,
@@ -115,7 +115,7 @@ Defines each key-value pair from the property map that you provide as an enumera
 ## Examples
 
 ```javascript
-const { defineReadOnly } = require( "@geronimus/define-read-only" );
+const defineReadOnly = require( "@geronimus/define-read-only" );
 
 const permanentRecord = {};
 
@@ -167,7 +167,7 @@ Identifies whether the provided argument represents a value that does not hold a
 ## Examples
 
 ```javascript
-const { isEmpty } = require( "@geronimus/is-empty" );
+const isEmpty = require( "@geronimus/is-empty" );
 
 isEmpty( null ); // => true
 isEmpty( undefined ); // => true
@@ -200,7 +200,7 @@ Tests a value for strict equality with `null` and `undefined`, and returns `true
 ## Examples
 
 ```javascript
-const { isNull } = require( "@geronimus/is-null" );
+const isNull = require( "@geronimus/is-null" );
 
 isNull( null ) // => true
 isNull( undefined ) // => true
@@ -229,7 +229,7 @@ Be aware that Arrays will return `true` because their type resolves to `"object"
 ## Examples
 
 ```javascript
-const { isObject } = require( "@geronimus/is-object" );
+const isObject = require( "@geronimus/is-object" );
 
 isObject( undefined ); // => false
 isObject( null ); // => false
@@ -342,7 +342,7 @@ Both bounds must be between `Number.MIN_SAFE_INTEGER` and `Number.MAX_SAFE_INTEG
 ## Examples
 
 ```javascript
-const { randomInt } = require( "@geronimus/random-int" );
+const randomInt = require( "@geronimus/random-int" );
 
 const randomByteValue = randomInt( 0, 255 );
 ```
@@ -374,7 +374,7 @@ Generates an array containing all of the integers between the two bounds that yo
 ## Examples
 
 ```javascript
-const { range } = require( "@geronimus/range" );
+const range = require( "@geronimus/range" );
 
 console.log( range( 1, 5 ) );
 // Expected output:
@@ -422,7 +422,7 @@ Identifies the type of a value, whether the type is primitive, complex, or exten
 #### Example
 
 ```javascript
-const { resolveTypeName } = require( "@geronimus/resolve-type-name" );
+const resolveTypeName = require( "@geronimus/resolve-type-name" );
 
 function resolveTypeName( undefined ); \\ => "undefined"
 function resolveTypeName( true ); \\ => "boolean"
@@ -588,7 +588,7 @@ Returns a new instance of a `TypeError` with the error message:
 ## Examples
 
 ```javascript
-const { TypeErr } = require( "@geronimus/type-err" );
+const TypeErr = require( "@geronimus/type-err" );
 
 function hello( who ) {
 
@@ -630,7 +630,7 @@ Specifically, this function generates its canonical string representation.
 ## Examples
 
 ```javascript
-const { uuid } = require( "@geronimus/uuid" );
+const uuid = require( "@geronimus/uuid" );
 
 console.log( uuid() );
 // Expected output:
