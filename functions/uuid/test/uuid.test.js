@@ -1,5 +1,5 @@
 const { assert } = require( "chai" );
-const { uuid } = require( "../src/uuid" );
+const uuid = require( "../src/uuid" );
 
 describe( "uuid", () => {
 

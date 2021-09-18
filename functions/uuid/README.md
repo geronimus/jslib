@@ -7,7 +7,7 @@ Specifically, this function generates its canonical string representation.
 ## Examples
 
 ```javascript
-const { uuid } = require( "@geronimus/uuid" );
+const uuid = require( "@geronimus/uuid" );
 
 console.log( uuid() );
 // Expected output:

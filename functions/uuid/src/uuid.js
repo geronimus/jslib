@@ -1,5 +1,5 @@
-const { randomInt } = require( "@geronimus/random-int" );
-const { range } = require( "@geronimus/range" );
+const randomInt = require( "@geronimus/random-int" );
+const range = require( "@geronimus/range" );
 
 function uuid() {
   const timeLow = stringifyBytes(
@@ -58,5 +58,5 @@ function decToHex( byteValue ) {
   return byteValue.toString( 16 ).padStart( 2, "0" );
 }
 
-exports.uuid = uuid;
+module.exports = uuid;
 
