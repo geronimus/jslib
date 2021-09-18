@@ -1,4 +1,4 @@
-const { isNull } = require( "@geronimus/isnull" );
+const isNull = require( "@geronimus/is-null" );
 
 function isEmpty( value ) {
   return isNull( value ) ||
@@ -14,5 +14,5 @@ function isEmpty( value ) {
     );
 }
 
-exports.isEmpty = isEmpty;
+module.exports = isEmpty;
 
