@@ -1,5 +1,5 @@
 const { assert } = require( "chai" );
-const { deepFreeze } = require( "../src/deep-freeze" );
+const deepFreeze = require( "../src/deep-freeze" );
 
 describe( "deepFreeze( obj )", () => {
 

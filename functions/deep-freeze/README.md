@@ -5,7 +5,7 @@ Recursively freezes an object, and all objects referenced in that object's prope
 ## Examples
 
 ```javascript
-const { deepFreeze } = require( "@geronimus/deep-freeze" );
+const deepFreeze = require( "@geronimus/deep-freeze" );
 
 const box = {
   height: 20,

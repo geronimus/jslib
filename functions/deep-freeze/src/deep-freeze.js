@@ -1,4 +1,4 @@
-const { isObject } = require( "@geronimus/is-object" );
+const isObject = require( "@geronimus/is-object" );
 
 function deepFreeze( obj ) {
 
@@ -17,5 +17,5 @@ function deepFreeze( obj ) {
   }
 }
 
-module.exports = { deepFreeze };
+module.exports = deepFreeze;
 
