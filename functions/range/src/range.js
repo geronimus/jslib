@@ -86,5 +86,5 @@ function validateRange( low, high ) {
     );
 }
 
-exports.range = range;
+module.exports = range;
 

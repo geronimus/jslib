@@ -1,5 +1,5 @@
 const { assert } = require( "chai" );
-const { range } = require( "../src/range" );
+const range = require( "../src/range" );
 
 describe( "range", () => {
 

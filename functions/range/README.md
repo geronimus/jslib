@@ -5,7 +5,7 @@ Generates an array containing all of the integers between the two bounds that yo
 ## Examples
 
 ```javascript
-const { range } = require( "@geronimus/range" );
+const range = require( "@geronimus/range" );
 
 console.log( range( 1, 5 ) );
 // Expected output:
