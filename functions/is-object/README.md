@@ -7,7 +7,7 @@ Be aware that Arrays will return `true` because their type resolves to `"object"
 ## Examples
 
 ```javascript
-const { isObject } = require( "@geronimus/is-object" );
+const isObject = require( "@geronimus/is-object" );
 
 isObject( undefined ); // => false
 isObject( null ); // => false

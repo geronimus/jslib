@@ -1,5 +1,5 @@
 const { assert } = require( "chai" );
-const { isObject } = require( "../src/is-object" );
+const isObject = require( "../src/is-object" );
 
 describe( "isObject( value )", () => {
 
