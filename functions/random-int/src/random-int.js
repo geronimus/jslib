@@ -67,5 +67,5 @@ function validateRange( low, high ) {
     );
 }
 
-exports.randomInt = randomInt;
+module.exports = randomInt;
 

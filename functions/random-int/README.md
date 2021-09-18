@@ -11,7 +11,7 @@ Both bounds must be between `Number.MIN_SAFE_INTEGER` and `Number.MAX_SAFE_INTEG
 ## Examples
 
 ```javascript
-const { randomInt } = require( "@geronimus/random-int" );
+const randomInt = require( "@geronimus/random-int" );
 
 const randomByteValue = randomInt( 0, 255 );
 ```

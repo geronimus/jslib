@@ -1,6 +1,6 @@
 {
   "name": "@geronimus/random-int",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Generates a pseudo-random integer between the two bounds you specify. (Both inclusive.)",
   "main": "./src/random-int.js",
   "scripts": {

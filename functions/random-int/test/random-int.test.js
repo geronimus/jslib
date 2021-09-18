@@ -1,5 +1,5 @@
 const { assert } = require( "chai" );
-const { randomInt } = require( "../src/random-int" );
+const randomInt = require( "../src/random-int" );
 
 describe( "randomInt", () => {
 
