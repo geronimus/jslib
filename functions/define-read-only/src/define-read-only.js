@@ -1,5 +1,5 @@
-const { isObject } = require( "@geronimus/is-object" );
-const { TypeErr } = require( "@geronimus/type-err" );
+const isObject = require( "@geronimus/is-object" );
+const TypeErr = require( "@geronimus/type-err" );
 
 function defineReadOnly( obj, propertyMap ) {
 
@@ -27,5 +27,5 @@ function defineReadOnly( obj, propertyMap ) {
   }
 }
 
-module.exports = { defineReadOnly };
+module.exports = defineReadOnly;
 

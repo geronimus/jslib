@@ -1,5 +1,5 @@
 const { assert } = require( "chai" );
-const { defineReadOnly } = require( "../src/define-read-only" );
+const defineReadOnly = require( "../src/define-read-only" );
 
 describe( "defineReadOnly( obj, propertyMap )", () => {
 

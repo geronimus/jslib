@@ -5,7 +5,7 @@ Defines each key-value pair from the property map that you provide as an enumera
 ## Examples
 
 ```javascript
-const { defineReadOnly } = require( "@geronimus/define-read-only" );
+const defineReadOnly = require( "@geronimus/define-read-only" );
 
 const permanentRecord = {};
 
