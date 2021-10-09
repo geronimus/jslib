@@ -583,7 +583,7 @@ Returns a new instance of a `TypeError` with the error message:
 
 > Reference name: *refName*
 > <br/>&nbsp;&nbsp;Expected: *expectedTypeName*
-> <br/>&nbsp;&nbsp;Actual: *either ***typeof foundInstance*** or, if foundInstance is of type ***object***, ***foundInstance.constructor.name****
+> <br/>&nbsp;&nbsp;Actual: *either ***typeof foundInstance*** or, if ***foundInstance*** is of type ***object***, then ***foundInstance.constructor.name***.*
 
 ## Examples
 
