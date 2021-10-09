@@ -582,8 +582,8 @@ TryAll( [ one, two, three, four ] );
 Returns a new instance of a `TypeError` with the error message:
 
 > Reference name: *refName*
-> &nbsp;&nbsp;Expected: *expectedTypeName*
-> &nbsp;&nbsp;Actual: *either ***typeof foundInstance*** or, if foundInstance is of type ***object***, ***foundInstance.constructor.name****
+> <br/>&nbsp;&nbsp;Expected: *expectedTypeName*
+> <br/>&nbsp;&nbsp;Actual: *either ***typeof foundInstance*** or, if foundInstance is of type ***object***, ***foundInstance.constructor.name****
 
 ## Examples
 
