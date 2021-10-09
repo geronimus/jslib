@@ -14,7 +14,7 @@ const TypeErr = require( "@geronimus/type-err" );
 function hello( who ) {
 
   if ( typeof who !== "string" )
-    throw TypeErr( "who", "string", typeof who );
+    throw TypeErr( "who", "string", who );
   else
     console.log( `Hello, ${ who }!` );
 }
