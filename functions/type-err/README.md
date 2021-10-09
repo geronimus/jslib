@@ -3,7 +3,9 @@
 Returns a new instance of a `TypeError` with the error message:
 
 > Reference name: *refName*
+>
 >     Expected: *expectedTypeName*
+>
 >     Actual: *either ***typeof foundInstance*** or, if foundInstance is of type ***object***, ***foundInstance.constructor.name****
 
 ## Examples
