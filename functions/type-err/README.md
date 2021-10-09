@@ -1,10 +1,10 @@
-# TypeErr( param, expectedType, actualType )
+# TypeErr( refName, expectedTypeName, foundInstance )
 
 Returns a new instance of a `TypeError` with the error message:
 
-    Parameter: _param_
-      Expected: _expectedType_
-      Actual: _actualType_
+> Reference name: *refName*
+>     Expected: *expectedTypeName*
+>     Actual: *either ***typeof foundInstance*** or, if foundInstance is of type ***object***, ***foundInstance.constructor.name****
 
 ## Examples
 
@@ -26,13 +26,15 @@ function hello( who ) {
 
 The parameter, variable, or reference name where the invalid type was found.
 
-`expectedType` *string*
+`expectedTypeName` *string*
 
 The type that is expected or allowed.
 
-`actualType` *string*
+`foundInstance` *any*
 
-The type that was found.
+The reference that you found to be of the wrong type.
+
+The function will resolve its name for display in the error message. If the instance is a primitive value, then its `typeof` name will be displayed. If it is an object, then the message will display the name of its constructor.
 
 ## Notes
 

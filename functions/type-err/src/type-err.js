@@ -1,8 +1,11 @@
-function TypeErr( param, expectedType, foundType ) {
-  
+const resolveTypeName = require( "@geronimus/resolve-type-name" );
+
+function TypeErr( refName, expectedTypeName, foundInstance ) {
+
   return new TypeError(
-    `Parameter: ${ param }\n  ` +
-      `Expected: ${ expectedType }\n  Found: ${ foundType }`
+    `Reference name: ${ refName }\n` +
+      `  Expected: ${ expectedTypeName }\n` +
+      `  Found: ${ resolveTypeName( foundInstance ) }`
   );
 }
 
