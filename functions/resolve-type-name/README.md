@@ -12,7 +12,7 @@ Identifies the type of a value, whether the type is primitive, complex, or exten
 
 - If the value is an object defined with a constructor function (eg, `new Date()`), then it returns the name of the constructor (eg, `Date`).
 
-## However, BEWARE!!!
+### However, BEWARE!!!
 
 This function is intended primarily to construct meaningful error and log messages during the development phase of a project.
 
@@ -20,7 +20,10 @@ It is not really intended for use in program logic, and certainly never to produ
 
 The reason is that the value returned for objects created be a constructor function is based on `Object.prototype.constructor.name`. If your code gets minified, then the original text of the constructor function's name will be replaced by a shortened, unrecognizable, and potentially randomized name.
 
-That means that this function will likely be unhelpful for production logging, and should not be used to produce error messages that may become visiable to the end user.
+This means that this function:
+
+  - Should never be used to determine the type of an object in program logic, by means of textual comparison, if there is any chance that the code will be minified.
+  - Will likely be unhelpful for production logging, and should not be used to produce error messages that may become visible to the end user.
 
 #### Example
 
