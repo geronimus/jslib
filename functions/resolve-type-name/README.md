@@ -1,6 +1,6 @@
 # resolveTypeName
 
-Identifies the type of a value, whether the type is primitive, complex, or extended.
+Gives the name of the type of a value, whether that type is a primitive, an object literal, or an object returned by a constructor function.
 
 - If the value is a primitive type (eg, `boolean`, `number`, `string` ), then it returns the name of that type.
 
@@ -10,19 +10,19 @@ Identifies the type of a value, whether the type is primitive, complex, or exten
 
 - If the value was defined as an object literal, then it returns the text `object`.
 
-- If the value is an object defined with a constructor function (eg, `new Date()`), then it returns the name of the constructor (eg, `Date`).
+- If the value is an object defined with a constructor function (eg, `new Date()`), then it returns the name of the constructor (eg, `"Date"`).
 
 ### However, BEWARE!!!
 
 This function is intended primarily to construct meaningful error and log messages during the development phase of a project.
 
-It is not really intended for use in program logic, and certainly never to produce any user-facing content.
+It is not intended for use in program logic, and certainly never to produce any user-facing content.
 
-The reason is that the value returned for objects created be a constructor function is based on `Object.prototype.constructor.name`. If your code gets minified, then the original text of the constructor function's name will be replaced by a shortened, unrecognizable, and potentially randomized name.
+The reason is that - for objects created using a constructor function - the value returned is the value of `Object.prototype.constructor.name`. If your code gets minified, then the constructor function's original name will be replaced by a shortened, unrecognizable, and potentially randomized name.
 
 This means that this function:
 
-  - Should never be used to determine the type of an object in program logic, by means of textual comparison, if there is any chance that the code will be minified.
+  - Should never be used to determine the type of a user-defined object in program logic. (Use the `instanceof` operator instead.)
   - Will likely be unhelpful for production logging, and should not be used to produce error messages that may become visible to the end user.
 
 #### Example
