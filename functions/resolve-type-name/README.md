@@ -14,7 +14,7 @@ Identifies the type of a value, whether the type is primitive, complex, or exten
 
 ## However, BEWARE!!!
 
-This function is intended primarily for the development phase to construct meaningful error and log messages.
+This function is intended primarily to construct meaningful error and log messages during the development phase of a project.
 
 It is not really intended for use in program logic, and certainly never to produce any user-facing content.
 
