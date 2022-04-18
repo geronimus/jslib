@@ -1,4 +1,3 @@
-const isObject = require( "@geronimus/is-object" );
 const TypeErr = require( "@geronimus/type-err" );
 
 function defineReadOnly( obj, propertyMap ) {
@@ -56,11 +55,11 @@ function defineReadOnly( obj, propertyMap ) {
 
   function validate( obj, propertyMap ) {
 
-    if ( !isObject( obj ) )
+    if ( typeof obj !== "object" || obj === null )
       throw TypeErr( "obj", "object", obj );
     else if ( Object.isFrozen( obj ) )
       throw new TypeError( "The object passed as `obj` must not be frozen." );
-    else if ( !isObject( propertyMap ) )
+    else if ( typeof propertyMap !== "object" || propertyMap === null )
       throw TypeErr( "propertyMap", "object", propertyMap );
   }
 }
