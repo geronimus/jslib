@@ -20,7 +20,7 @@
     "type": "git",
     "url": "git+https://github.com/geronimus/jslib.git"
   },
-  "license": "BSD-2-Clause",
+  "license": "BSD-3-Clause",
   "bugs": {
     "url": "https://github.com/geronimus/jslib/issues"
   },
