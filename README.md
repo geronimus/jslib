@@ -147,14 +147,16 @@ The object to which the read-only, enumerable properties will be added. It must 
 
 `propertyMap` *object*
 
-A map containing one or more key-value pairs to add to the target object as enumerable-but-not-writable properties.
+An ordinary object containing one or more key-value pairs to add to the target object.
+
+As well as value properties, you can also define getter and setter functions.
 
 ## Notes
 
 - Values from the `propertyMap` that are not primitive values (eg, objects ) will be added by reference. They will not be deep copies.
 - Each property added will be enumerable, but not writable or configurable.
-- This function does not allow you to define property getters or setters.
-- The motivation for this function is to be able to easily add immutable - yet enumerable -  properties to the returned `this` object, when a function is called with the `new` operator. (Properties added with `Object.defineProperty` or `Object.defineProperties` are not enumerable, unless you explicitly specify otherwise.)
+- The motivation for this function is to be able to easily add a list of immutable-yet-enumerable properties to an object. (Properties added with `Object.defineProperty` or `Object.defineProperties` are not enumerable by default.)
+- For example, you can use it to add a "public interface" of methods and getter/setter properties to a constructor function's `this` reference, after calling the constructor function with the `new` keyword.
 
 
 
